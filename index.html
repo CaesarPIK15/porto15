@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <!-- SEO Meta Tags -->
   <title>Caesar Arkan Athariz — Junior AI Web Engineer | Portfolio</title>
-  <meta name="description" content="Portfolio resmi Caesar Arkan Athariz, Junior AI Web Engineer dan pelajar SMKN 1 Probolinggo yang berfokus pada Modern Web Development dan Integrasi AI.">
-  <meta name="keywords" content="Caesar Arkan Athariz, Junior AI Web Engineer, SMKN 1 Probolinggo, Web Developer, AI Web Developer, Portfolio">
+  <meta name="description"
+    content="Portfolio resmi Caesar Arkan Athariz, Junior AI Web Engineer dan pelajar SMKN 1 Probolinggo yang berfokus pada Modern Web Development dan Integrasi AI.">
+  <meta name="keywords"
+    content="Caesar Arkan Athariz, Junior AI Web Engineer, SMKN 1 Probolinggo, Web Developer, AI Web Developer, Portfolio">
   <meta name="author" content="Caesar Arkan Athariz">
-  
+
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Caesar Arkan Athariz — Junior AI Web Engineer">
-  <meta property="og:description" content="Portfolio pribadi profesional berkonsep modern, bersih, dan performan karya Caesar Arkan Athariz.">
+  <meta property="og:description"
+    content="Portfolio pribadi profesional berkonsep modern, bersih, dan performan karya Caesar Arkan Athariz.">
   <meta property="og:type" content="website">
-  
+
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  
+
   <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%2338bdf8' font-family='sans-serif' font-weight='bold' font-size='42'>CAA</text></svg>">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%2338bdf8' font-family='sans-serif' font-weight='bold' font-size='42'>CAA</text></svg>">
 </head>
+
 <body>
   <!-- Header / Navigation -->
   <header class="site-header" id="header">
@@ -50,9 +58,12 @@
 
       <!-- Utility Actions (Theme Toggle & Mobile Menu Button) -->
       <div class="header-actions">
-        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Ganti mode gelap/terang" title="Beralih tema">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Ganti mode gelap/terang"
+          title="Beralih tema">
           <!-- Sun Icon (for light mode) -->
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -64,37 +75,109 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
           <!-- Moon Icon (for dark mode) -->
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
         <!-- Mobile Hamburger Toggle -->
-        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu navigasi"
+          aria-expanded="false" aria-controls="mobile-menu">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
         </button>
       </div>
     </div>
+  </header>
 
-    <!-- Mobile Drawer Menu -->
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <!-- Mobile Menu Overlay & Drawer (Placed outside header to prevent backdrop-filter containment bug) -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-container">
       <nav class="mobile-nav" aria-label="Navigasi Mobile">
         <ul class="mobile-nav-list">
-          <li><a href="#hero" class="mobile-nav-link">Home</a></li>
-          <li><a href="#about" class="mobile-nav-link">About</a></li>
-          <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-          <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-          <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
-          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+          <li>
+            <a href="#hero" class="mobile-nav-link active">
+              <span class="mobile-nav-text">Home</span>
+              <span class="mobile-nav-indicator" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="mobile-nav-link">
+              <span class="mobile-nav-text">About</span>
+              <span class="mobile-nav-indicator" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="mobile-nav-link">
+              <span class="mobile-nav-text">Skills</span>
+              <span class="mobile-nav-indicator" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="mobile-nav-link">
+              <span class="mobile-nav-text">Projects</span>
+              <span class="mobile-nav-indicator" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#journey" class="mobile-nav-link">
+              <span class="mobile-nav-text">Journey</span>
+              <span class="mobile-nav-indicator" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="mobile-nav-link">
+              <span class="mobile-nav-text">Contact</span>
+              <span class="mobile-nav-indicator" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </a>
+          </li>
         </ul>
-        <div class="mobile-nav-footer">
-          <p class="mobile-meta">Caesar Arkan Athariz • SMKN 1 Probolinggo</p>
-        </div>
       </nav>
+      <div class="mobile-nav-footer">
+        <div class="mobile-brand-badge">
+          <span class="logo-badge">CAA</span>
+          <div class="mobile-brand-info">
+            <span class="mobile-brand-title">Caesar Arkan Athariz</span>
+            <span class="mobile-meta">Junior AI Web Engineer • SMKN 1 Probolinggo</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+  </div>
 
   <main id="main-content">
     <!-- SECTION 1: HERO -->
@@ -115,13 +198,16 @@
           </div>
 
           <p class="hero-description">
-            Pelajar di SMKN 1 Probolinggo dengan fokus dan dedikasi dalam perancangan website modern, clean architecture, eksplorasi teknologi Artificial Intelligence, serta rekayasa perangkat lunak berbasis web.
+            Pelajar di SMKN 1 Probolinggo dengan fokus dan dedikasi dalam perancangan website modern, clean
+            architecture, eksplorasi teknologi Artificial Intelligence, serta rekayasa perangkat lunak berbasis web.
           </p>
 
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">
               <span>View My Projects</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -133,14 +219,21 @@
 
           <div class="hero-social-links">
             <span class="social-label">Koneksi Cepat:</span>
-            <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="social-pill" title="Kunjungi GitHub CaesarPIK15">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="social-pill"
+              title="Kunjungi GitHub CaesarPIK15">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
               </svg>
               <span>CaesarPIK15</span>
             </a>
             <a href="mailto:caesarghani270@gmail.com" class="social-pill" title="Kirim Email ke Caesar">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
@@ -153,12 +246,8 @@
         <div class="hero-visual reveal">
           <div class="hero-profile-card">
             <div class="profile-img-wrapper">
-              <img 
-                src="assets/images/profile.jpg" 
-                alt="Foto Caesar Arkan Athariz - Junior AI Web Engineer" 
-                class="hero-profile-photo"
-                loading="eager"
-              >
+              <img src="assets/images/profile.jpg" alt="Foto Caesar Arkan Athariz - Junior AI Web Engineer"
+                class="hero-profile-photo" loading="eager">
               <div class="profile-floating-badge">
                 <div class="profile-badge-role">
                   <span class="status-indicator"></span>
@@ -196,19 +285,30 @@
           <div class="about-narrative reveal">
             <div class="narrative-card">
               <p class="lead-text">
-                Halo! Saya <strong>Caesar Arkan Athariz</strong>, seorang pelajar di <strong>SMKN 1 Probolinggo</strong> yang memiliki komitmen kuat dalam mendalami dunia <em>Web Development</em>, <em>Artificial Intelligence</em>, dan <em>Programming</em>.
+                Halo! Saya <strong>Caesar Arkan Athariz</strong>, seorang pelajar di <strong>SMKN 1 Probolinggo</strong>
+                yang memiliki komitmen kuat dalam mendalami dunia <em>Web Development</em>, <em>Artificial
+                  Intelligence</em>, dan <em>Programming</em>.
               </p>
               <p>
-                Saya percaya bahwa teknologi terbaik tercipta dari perpaduan antara logika pemecahan masalah yang solid, estetika antarmuka yang bersih, dan pemanfaatan potensi kecerdasan buatan untuk membantu kehidupan sehari-hari secara nyata.
+                Saya percaya bahwa teknologi terbaik tercipta dari perpaduan antara logika pemecahan masalah yang solid,
+                estetika antarmuka yang bersih, dan pemanfaatan potensi kecerdasan buatan untuk membantu kehidupan
+                sehari-hari secara nyata.
               </p>
               <p>
-                Sebagai seorang junior engineer, saya berdedikasi untuk terus mempelajari fondasi pemrograman secara mendalam—mulai dari semantic HTML, performa CSS murni, arsitektur JavaScript modern, hingga cara mengintegrasikan model AI ke dalam antarmuka web yang intuitif dan cepat.
+                Sebagai seorang junior engineer, saya berdedikasi untuk terus mempelajari fondasi pemrograman secara
+                mendalam—mulai dari semantic HTML, performa CSS murni, arsitektur JavaScript modern, hingga cara
+                mengintegrasikan model AI ke dalam antarmuka web yang intuitif dan cepat.
               </p>
 
               <div class="about-highlights">
                 <div class="highlight-item">
                   <div class="highlight-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 14 14"></polyline>
+                    </svg>
                   </div>
                   <div>
                     <h4>Konsisten Belajar</h4>
@@ -217,7 +317,15 @@
                 </div>
                 <div class="highlight-item">
                   <div class="highlight-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
                   </div>
                   <div>
                     <h4>Clean Code & Structure</h4>
@@ -260,7 +368,8 @@
                 </div>
                 <div class="fact-row">
                   <span class="fact-label">GitHub</span>
-                  <span class="fact-value"><a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer">@CaesarPIK15</a></span>
+                  <span class="fact-value"><a href="https://github.com/CaesarPIK15" target="_blank"
+                      rel="noopener noreferrer">@CaesarPIK15</a></span>
                 </div>
                 <div class="fact-row">
                   <span class="fact-label">Email</span>
@@ -270,7 +379,12 @@
 
               <div class="facts-footer">
                 <div class="location-badge">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
                   <span>Probolinggo, Jawa Timur, Indonesia</span>
                 </div>
               </div>
@@ -309,7 +423,8 @@
           <h2 class="section-title">Skills &amp; Competencies</h2>
           <div class="section-divider"></div>
           <p class="section-description">
-            Kombinasi keahlian dalam rekayasa web frontend modern dan integrasi teknologi kecerdasan buatan, dirancang tanpa persentase artifisial untuk mencerminkan kompetensi nyata.
+            Kombinasi keahlian dalam rekayasa web frontend modern dan integrasi teknologi kecerdasan buatan, dirancang
+            tanpa persentase artifisial untuk mencerminkan kompetensi nyata.
           </p>
         </div>
 
@@ -318,10 +433,13 @@
           <div class="skill-category-card reveal">
             <div class="category-header">
               <div class="category-icon web-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
                   <circle cx="12" cy="12" r="10"></circle>
                   <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
                 </svg>
               </div>
               <div>
@@ -333,7 +451,12 @@
             <div class="skill-items-grid">
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>HTML</h4>
@@ -343,7 +466,11 @@
 
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l10 5.5v11L12 22 2 18.5v-11L12 2z"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M12 2l10 5.5v11L12 22 2 18.5v-11L12 2z"></path>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>CSS</h4>
@@ -353,7 +480,13 @@
 
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>JavaScript</h4>
@@ -363,7 +496,13 @@
 
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>Responsive Web Design</h4>
@@ -373,7 +512,14 @@
 
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>UI/UX</h4>
@@ -387,7 +533,9 @@
           <div class="skill-category-card reveal">
             <div class="category-header">
               <div class="category-icon ai-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
                   <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                   <rect x="9" y="9" width="6" height="6"></rect>
                   <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -409,7 +557,13 @@
             <div class="skill-items-grid">
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path
+                      d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+                    </path>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>Artificial Intelligence</h4>
@@ -419,7 +573,15 @@
 
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                    </path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>AI Integration</h4>
@@ -429,7 +591,12 @@
 
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>Programming</h4>
@@ -439,7 +606,12 @@
 
               <div class="skill-pill">
                 <div class="skill-pill-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                  </svg>
                 </div>
                 <div class="skill-pill-info">
                   <h4>Problem Solving</h4>
@@ -460,7 +632,8 @@
           <h2 class="section-title">Featured Projects</h2>
           <div class="section-divider"></div>
           <p class="section-description">
-            Koleksi prototipe dan proyek studi kasus yang merepresentasikan kompetensi teknis dalam Web Development dan pemanfaatan AI.
+            Koleksi prototipe dan proyek studi kasus yang merepresentasikan kompetensi teknis dalam Web Development dan
+            pemanfaatan AI.
           </p>
         </div>
 
@@ -474,16 +647,17 @@
               <span class="window-title">ai-web-project.app</span>
               <span class="project-category-tag">AI Web</span>
             </div>
-            
+
             <div class="project-body">
               <div class="project-badge-row">
                 <span class="type-pill">AI Web Project</span>
               </div>
-              
+
               <h3 class="project-title">AI Knowledge Assistant Interface</h3>
-              
+
               <p class="project-description">
-                Prototipe antarmuka web interaktif yang dirancang untuk mengintegrasikan model kecerdasan buatan, memungkinkan pengguna mengajukan pertanyaan kontekstual dengan respon cerdas dan UI chat minimalis.
+                Prototipe antarmuka web interaktif yang dirancang untuk mengintegrasikan model kecerdasan buatan,
+                memungkinkan pengguna mengajukan pertanyaan kontekstual dengan respon cerdas dan UI chat minimalis.
               </p>
 
               <div class="tech-stack-tags">
@@ -496,10 +670,23 @@
               <div class="project-actions">
                 <a href="#contact" class="btn btn-outline btn-sm">
                   <span>View Project</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
                 </a>
-                <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" aria-label="Lihat repositori di GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-ghost btn-sm" aria-label="Lihat repositori di GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
                   <span>Code</span>
                 </a>
               </div>
@@ -515,16 +702,17 @@
               <span class="window-title">web-development-project.app</span>
               <span class="project-category-tag">Web Dev</span>
             </div>
-            
+
             <div class="project-body">
               <div class="project-badge-row">
                 <span class="type-pill">Web Development Project</span>
               </div>
-              
+
               <h3 class="project-title">Responsive Academic Portal Architecture</h3>
-              
+
               <p class="project-description">
-                Perancangan arsitektur portal berbasis web dengan fokus penuh pada kecepatan akses (performance), desain responsif adaptif, mode gelap dinamis, dan navigasi ramah aksesibilitas.
+                Perancangan arsitektur portal berbasis web dengan fokus penuh pada kecepatan akses (performance), desain
+                responsif adaptif, mode gelap dinamis, dan navigasi ramah aksesibilitas.
               </p>
 
               <div class="tech-stack-tags">
@@ -537,10 +725,23 @@
               <div class="project-actions">
                 <a href="#contact" class="btn btn-outline btn-sm">
                   <span>View Project</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
                 </a>
-                <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" aria-label="Lihat repositori di GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-ghost btn-sm" aria-label="Lihat repositori di GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
                   <span>Code</span>
                 </a>
               </div>
@@ -556,16 +757,17 @@
               <span class="window-title">interactive-js-project.app</span>
               <span class="project-category-tag">Vanilla JS</span>
             </div>
-            
+
             <div class="project-body">
               <div class="project-badge-row">
                 <span class="type-pill">Interactive JavaScript Project</span>
               </div>
-              
+
               <h3 class="project-title">Dynamic Logic &amp; Calculation Engine</h3>
-              
+
               <p class="project-description">
-                Aplikasi utilitas interaktif murni dengan manipulasi DOM tanpa dependensi luar, dilengkapi validasi input real-time, penyimpanan state lokal (LocalStorage), dan visualisasi data sederhana.
+                Aplikasi utilitas interaktif murni dengan manipulasi DOM tanpa dependensi luar, dilengkapi validasi
+                input real-time, penyimpanan state lokal (LocalStorage), dan visualisasi data sederhana.
               </p>
 
               <div class="tech-stack-tags">
@@ -578,10 +780,23 @@
               <div class="project-actions">
                 <a href="#contact" class="btn btn-outline btn-sm">
                   <span>View Project</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
                 </a>
-                <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" aria-label="Lihat repositori di GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-ghost btn-sm" aria-label="Lihat repositori di GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
                   <span>Code</span>
                 </a>
               </div>
@@ -599,7 +814,8 @@
           <h2 class="section-title">Learning Journey</h2>
           <div class="section-divider"></div>
           <p class="section-description">
-            Rute pembelajaran realistis dan autentik yang sedang saya tempuh sebagai pelajar kejuruan dalam menguasai teknologi web dan AI.
+            Rute pembelajaran realistis dan autentik yang sedang saya tempuh sebagai pelajar kejuruan dalam menguasai
+            teknologi web dan AI.
           </p>
         </div>
 
@@ -617,7 +833,8 @@
               <h3 class="timeline-role">Pelajar / Student</h3>
               <h4 class="timeline-org">SMKN 1 Probolinggo</h4>
               <p class="timeline-desc">
-                Menempuh pendidikan vokasi formal di SMKN 1 Probolinggo. Mempelajari rekayasa perangkat lunak, logika pemrograman, jaringan dasar, dan implementasi aplikasi berbasis web secara terstruktur.
+                Menempuh pendidikan vokasi formal di SMKN 1 Probolinggo. Mempelajari rekayasa perangkat lunak, logika
+                pemrograman, jaringan dasar, dan implementasi aplikasi berbasis web secara terstruktur.
               </p>
               <div class="timeline-tags">
                 <span>Web Development &amp; Programming</span>
@@ -640,7 +857,9 @@
               <h3 class="timeline-role">Junior AI Web Engineering Exploration</h3>
               <h4 class="timeline-org">Studi Independen &amp; Praktek Nyata</h4>
               <p class="timeline-desc">
-                Mengeksplorasi integrasi model kecerdasan buatan (AI APIs, prompt engineering, and context pipelines) ke dalam produk web. Membangun fondasi clean code berbasis standar web modern (HTML5, CSS3, JavaScript murni).
+                Mengeksplorasi integrasi model kecerdasan buatan (AI APIs, prompt engineering, and context pipelines) ke
+                dalam produk web. Membangun fondasi clean code berbasis standar web modern (HTML5, CSS3, JavaScript
+                murni).
               </p>
               <div class="timeline-tags">
                 <span>AI Integration</span>
@@ -663,7 +882,8 @@
               <h3 class="timeline-role">Algoritma &amp; Pemrograman Dasar</h3>
               <h4 class="timeline-org">Pengembangan Problem Solving</h4>
               <p class="timeline-desc">
-                Mengasah kemampuan computational thinking dan penyelesaian masalah logis melalui latihan algoritma, struktur kontrol, dan pemahaman cara kerja browser serta ekosistem internet.
+                Mengasah kemampuan computational thinking dan penyelesaian masalah logis melalui latihan algoritma,
+                struktur kontrol, dan pemahaman cara kerja browser serta ekosistem internet.
               </p>
               <div class="timeline-tags">
                 <span>Algoritma</span>
@@ -684,7 +904,8 @@
           <h2 class="section-title">Let's Build Something Great</h2>
           <div class="section-divider"></div>
           <p class="section-description">
-            Tertarik untuk berdiskusi mengenai proyek web, eksplorasi AI, atau kesempatan kolaborasi belajar? Hubungi saya melalui formulir di bawah atau via email langsung.
+            Tertarik untuk berdiskusi mengenai proyek web, eksplorasi AI, atau kesempatan kolaborasi belajar? Hubungi
+            saya melalui formulir di bawah atau via email langsung.
           </p>
         </div>
 
@@ -694,14 +915,20 @@
             <div class="info-card">
               <h3 class="info-heading">Informasi Kontak</h3>
               <p class="info-subtext">
-                Saya selalu terbuka untuk berdiskusi seputar pengembangan web, inovasi AI, dan ide-ide baru yang menarik.
+                Saya selalu terbuka untuk berdiskusi seputar pengembangan web, inovasi AI, dan ide-ide baru yang
+                menarik, serta selalu ingin mencari hal baru di dunia IT.
               </p>
 
               <div class="contact-method-list">
                 <!-- Email Item -->
                 <div class="contact-method-item">
                   <div class="method-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
                   </div>
                   <div class="method-details">
                     <span class="method-label">Email Pribadi</span>
@@ -712,18 +939,30 @@
                 <!-- GitHub Item -->
                 <div class="contact-method-item">
                   <div class="method-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
                   </div>
                   <div class="method-details">
                     <span class="method-label">GitHub Profile</span>
-                    <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="method-link">github.com/CaesarPIK15</a>
+                    <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer"
+                      class="method-link">github.com/CaesarPIK15</a>
                   </div>
                 </div>
 
                 <!-- Location Item -->
                 <div class="contact-method-item">
                   <div class="method-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
                   </div>
                   <div class="method-details">
                     <span class="method-label">Lokasi / Sekolah</span>
@@ -733,8 +972,14 @@
               </div>
 
               <div class="direct-mailto-action">
-                <a href="mailto:caesarghani270@gmail.com?subject=Halo%20Caesar%20Arkan%20-%20Portfolio%20Inquiry" class="btn btn-secondary btn-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:caesarghani270@gmail.com?subject=Halo%20Caesar%20Arkan%20-%20Portfolio%20Inquiry"
+                  class="btn btn-secondary btn-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
                   <span>Buka di Aplikasi Email (mailto)</span>
                 </a>
               </div>
@@ -749,15 +994,8 @@
                   <label for="contact-name" class="form-label">
                     Nama Lengkap <span class="required">*</span>
                   </label>
-                  <input 
-                    type="text" 
-                    id="contact-name" 
-                    name="name" 
-                    class="form-input" 
-                    placeholder="Contoh: Alex Pratama" 
-                    required 
-                    autocomplete="name"
-                  >
+                  <input type="text" id="contact-name" name="name" class="form-input"
+                    placeholder="Contoh: Caesar Arkan Athariz" required autocomplete="name">
                   <span class="error-msg" id="name-error">Harap masukkan nama Anda.</span>
                 </div>
 
@@ -765,15 +1003,8 @@
                   <label for="contact-email" class="form-label">
                     Alamat Email <span class="required">*</span>
                   </label>
-                  <input 
-                    type="email" 
-                    id="contact-email" 
-                    name="email" 
-                    class="form-input" 
-                    placeholder="nama@domain.com" 
-                    required 
-                    autocomplete="email"
-                  >
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="nama@gmail.com"
+                    required autocomplete="email">
                   <span class="error-msg" id="email-error">Harap masukkan alamat email yang valid.</span>
                 </div>
 
@@ -781,14 +1012,8 @@
                   <label for="contact-message" class="form-label">
                     Pesan <span class="required">*</span>
                   </label>
-                  <textarea 
-                    id="contact-message" 
-                    name="message" 
-                    class="form-textarea" 
-                    rows="5" 
-                    placeholder="Tuliskan pesan, ide, atau pertanyaan Anda di sini..." 
-                    required
-                  ></textarea>
+                  <textarea id="contact-message" name="message" class="form-textarea" rows="5"
+                    placeholder="Tuliskan pesan, ide, atau pertanyaan Anda di sini..." required></textarea>
                   <span class="error-msg" id="message-error">Pesan tidak boleh kosong (minimal 10 karakter).</span>
                 </div>
 
@@ -797,7 +1022,12 @@
 
                 <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
                   <span>Send Message</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
                 </button>
               </form>
             </div>
@@ -838,13 +1068,23 @@
           &copy; <span id="current-year">2026</span> Caesar Arkan Athariz. All rights reserved.
         </p>
         <div class="footer-socials">
-          <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub CaesarPIK15">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <a href="https://github.com/CaesarPIK15" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+            title="GitHub CaesarPIK15">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
             <span>GitHub</span>
           </a>
           <span class="dot-separator">•</span>
           <a href="mailto:caesarghani270@gmail.com" class="footer-social-link" title="Email Caesar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
             <span>Email</span>
           </a>
         </div>
@@ -853,8 +1093,10 @@
   </footer>
 
   <!-- Scroll to Top Button -->
-  <button type="button" class="scroll-top-btn" id="scroll-top-btn" aria-label="Kembali ke atas halaman" title="Scroll ke atas">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <button type="button" class="scroll-top-btn" id="scroll-top-btn" aria-label="Kembali ke atas halaman"
+    title="Scroll ke atas">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
@@ -862,4 +1104,5 @@
   <!-- Main JavaScript File -->
   <script src="js/script.js"></script>
 </body>
+
 </html>
