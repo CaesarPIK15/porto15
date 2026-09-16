@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
   const desktopNavLinks = document.querySelectorAll('.nav-desktop .nav-link');
   const scrollTopBtn = document.getElementById('scroll-top-btn');
@@ -95,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.classList.toggle('is-open', isMenuOpen);
     mobileMenu.setAttribute('aria-hidden', isMenuOpen ? 'false' : 'true');
 
+    if (mobileMenuOverlay) {
+      mobileMenuOverlay.classList.toggle('is-open', isMenuOpen);
+      mobileMenuOverlay.setAttribute('aria-hidden', isMenuOpen ? 'false' : 'true');
+    }
+
     // Prevent background scrolling when drawer is open
     document.body.style.overflow = isMenuOpen ? 'hidden' : '';
   };
@@ -102,10 +108,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => toggleMobileMenu());
 
-    // Close on mobile nav link click
-    mobileNavLinks.forEach((link) => {
-      link.addEventListener('click', () => {
+    // Close on mobile menu overlay backdrop click
+    if (mobileMenuOverlay) {
+      mobileMenuOverlay.addEventListener('click', () => {
         if (isMenuOpen) toggleMobileMenu(false);
+      });
+    }
+
+    // Close on mobile nav link click and navigate smoothly
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            if (isMenuOpen) toggleMobileMenu(false);
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+            history.pushState(null, '', targetId);
+          } else if (isMenuOpen) {
+            toggleMobileMenu(false);
+          }
+        } else if (isMenuOpen) {
+          toggleMobileMenu(false);
+        }
       });
     });
 
@@ -357,7 +383,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------------------
-  // 9. Console Badge (Clean Signature)
+  // 9. Shooting Stars / Meteor Animation
+  // ------------------------------------------------------------------------
+  const initShootingStars = () => {
+    const container = document.createElement('div');
+    container.id = 'shooting-stars-container';
+    container.setAttribute('aria-hidden', 'true');
+    // Append to body but it will be styled behind everything
+    document.body.appendChild(container);
+
+    const starCount = 20; // Number of meteors
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('span');
+      star.classList.add('shooting-star');
+      
+      // Randomize starting positions along the top and right edges
+      // to ensure they fall across the screen
+      const topOffset = Math.random() * 100 - 20; // -20vh to 80vh
+      const leftOffset = Math.random() * 100 + 20; // 20vw to 120vw
+      const delay = Math.random() * 8; // 0 to 8s
+      const duration = 1.5 + Math.random() * 3; // 1.5s to 4.5s
+
+      star.style.top = `${topOffset}vh`;
+      star.style.left = `${leftOffset}vw`;
+      star.style.animationDelay = `${delay}s`;
+      star.style.animationDuration = `${duration}s`;
+
+      container.appendChild(star);
+    }
+  };
+
+  initShootingStars();
+
+  // ------------------------------------------------------------------------
+  // 10. Console Badge (Clean Signature)
   // ------------------------------------------------------------------------
   console.log(
     '%c Caesar Arkan Athariz %c Junior AI Web Engineer • SMKN 1 Probolinggo ',
